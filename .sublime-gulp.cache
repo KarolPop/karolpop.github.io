@@ -1,0 +1,1 @@
+{"C:\\wamp64\\www\\my-website\\gulpfile.js":{"sha1":"946be2bfd9e8c431abdfb3d06056db2eeedf6d28","tasks":{"compress":{"name":"compress","dependencies":""},"sass":{"name":"sass","dependencies":""},"images":{"name":"images","dependencies":""},"default":{"name":"default","dependencies":"sass images compress"}}}}
