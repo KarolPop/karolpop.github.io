@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 var imagemin = require('gulp-imagemin');
 var minify = require('gulp-minify');
+var plumber = require('gulp-plumber');
+
 
 var sassPaths = [
   'bower_components/foundation-sites/scss',
@@ -10,6 +12,7 @@ var sassPaths = [
 
 gulp.task('compress', function() {
   gulp.src('js/*.js')
+    .pipe(plumber())
     .pipe(minify({
         ext:{
             src:'app.js',
@@ -37,6 +40,7 @@ gulp.task('sass', function() {
 
 gulp.task('images', function() {
   return gulp.src('pre-img/*')
+        .pipe(plumber())
         .pipe(imagemin())
         .pipe(gulp.dest('img'))
 });
